@@ -5,11 +5,11 @@ const userModel = require("./Models/users")
 
 const app = express()
 
-app.use(cors({
-    origin:["https://login-system-frontend-cfuvycoe4-saqib-bedars-projects.vercel.app"],
-    methods: ['GET', 'POST', 'DELETE'],
-    credential: true,
-}));
+app.use(cors({    
+    origin: ["https://login-system-frontend-cfuvycoe4-saqib-bedars-projects.vercel.app"],    
+    methods: ['GET', 'POST', 'DELETE'],    
+    credentials: true,
+  }));  
 
 app.use(express.json());
 
