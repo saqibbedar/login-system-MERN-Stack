@@ -5,7 +5,12 @@ const userModel = require("./Models/users")
 
 const app = express()
 
-app.use(cors());
+app.use(cors({
+    origin:[""],
+    methods: ["POST", "GET"],
+    credential: true,
+}));
+
 app.use(express.json());
 
 // require .env
