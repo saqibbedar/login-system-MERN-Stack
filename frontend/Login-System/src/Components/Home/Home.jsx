@@ -2,7 +2,6 @@ import "./Home.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-import { baseURL } from "../../../url";
 
 const Home = () => {
   const { id } = useParams();
@@ -14,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get(`${baseURL}/getUser/${id}`)
+      .get(`/api/getUser/${id}`)
       .then((result) => {
         console.log(result);
         setName(result.data.name);
@@ -25,7 +24,7 @@ const Home = () => {
 
   const deleteUser = () => {
     axios
-      .delete(`${baseURL}/deleteUser/${id}`)
+      .delete(`/api/deleteUser/${id}`)
       .then((result) => {
         console.log(result);
         alert("Account was deleted successfully!");

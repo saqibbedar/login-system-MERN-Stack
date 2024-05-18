@@ -2,7 +2,6 @@ import "../Register/Register.css";
 import { useState } from "react";
 import { Link, useNavigate} from "react-router-dom";
 import axios from 'axios'
-import { baseURL } from "../../../url";
 
 const Register = () => {
   const [email, setEmail] = useState();
@@ -11,7 +10,7 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post(`${baseURL}/login`, {email, password})
+    axios.post(`/api/login`, {email, password})
     .then(result => {
       console.log(result)
       if(result.data.status === "success")
