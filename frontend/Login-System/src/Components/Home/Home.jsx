@@ -9,7 +9,8 @@ const Home = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [active, setActive] = useState(false);
-
+  axios.defaults.withCredentials = true;
+  
   const navigate = useNavigate();
 
   useEffect(() => {
