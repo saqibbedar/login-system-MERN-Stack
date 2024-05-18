@@ -9,6 +9,8 @@ app.use(cors({
     origin: ["https://login-system-frontend-cfuvycoe4-saqib-bedars-projects.vercel.app"],    
     methods: ['GET', 'POST', 'DELETE'],    
     credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    exposedHeaders: ['Content-Type', 'Authorization'],
   }));  
 
 app.use(express.json());
