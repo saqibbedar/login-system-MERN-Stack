@@ -5,7 +5,13 @@ const userModel = require("./Models/users")
 
 const app = express()
 
-app.use(cors());  
+app.use(cors({
+    origin: 'https://login-system-frontend-two.vercel.app',
+    methods: ['GET', 'POST', 'DELETE', 'PUT'],
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    exposedHeaders: ['Content-Type', 'Authorization'],
+})); 
 
 app.use(express.json());
 
