@@ -4,7 +4,7 @@ This application is designed for demonstrating the working of login system with 
 
 ## Live Preview
 
-You can check out the live version of the app [here](https://login-system-frontend-two.vercel.app/) (replace with your actual live preview link).
+You can check out the live version of the app [here](https://login-system-frontend-two.vercel.app/).
 
 ## Getting Started
 
